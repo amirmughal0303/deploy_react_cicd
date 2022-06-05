@@ -1,3 +1,6 @@
+properties([pipelineTriggers([githubPush()])])
+
+node {git url: 'https://github.com/amirmughal0303/deploy_react_cicd.git', branch: 'main'}
 pipeline{
     agent none
     stages {
